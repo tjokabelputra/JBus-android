@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register Your Account"
-        android:textColor="@color/black"
+        android:textColor="#777777"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginBottom="10dp"/>
@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Masukan Username, Email, dan Password"
-        android:textColor="@color/black"
+        android:textColor="#777777"
         android:textSize="16sp"
         android:layout_marginBottom="10dp"/>
 
@@ -49,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginBottom="20dp"
-            android:hint="Username"
+            android:hint="Email"
             android:inputType="textNoSuggestions" />
 
         <TextView

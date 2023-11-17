@@ -15,5 +15,5 @@
         android:gravity="center"
         android:text="こんにちは\n🚌💥"
         android:textSize="40sp"
-        android:textColor="@color/black" />
+        android:textColor="#777777" />
 </LinearLayout>

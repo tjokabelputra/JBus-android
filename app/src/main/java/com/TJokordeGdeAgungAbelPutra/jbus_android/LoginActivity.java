@@ -20,6 +20,8 @@ public class LoginActivity extends AppCompatActivity {
 
         registerHere = findViewById(R.id.registerhere);
         loginButton = findViewById(R.id.login);
+        registerHere.setOnClickListener(v -> {moveActivity(this,RegisterActivity.class);});
+        loginButton.setOnClickListener(l ->{moveActivity(this, MainActivity.class);});
 
         getSupportActionBar().hide();
     }
@@ -27,13 +29,9 @@ public class LoginActivity extends AppCompatActivity {
     private void moveActivity(Context context, Class<?> cls){
         Intent intent = new Intent(context,cls);
         startActivity(intent);
-
-        registerHere.setOnClickListener(v -> {moveActivity(this,RegisterActivity.class);});
     }
 
     private void viewToast(Context context, String msg){
         Toast.makeText(context,msg,Toast.LENGTH_SHORT).show();
-
-        loginButton.setOnClickListener(l ->{moveActivity(this, MainActivity.class);});
     }
 }
