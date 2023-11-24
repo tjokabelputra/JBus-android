@@ -2,24 +2,83 @@ package com.TJokordeGdeAgungAbelPutra.jbus_android;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Account;
+import com.TJokordeGdeAgungAbelPutra.jbus_android.model.BaseResponse;
+import com.TJokordeGdeAgungAbelPutra.jbus_android.request.BaseApiService;
+import com.TJokordeGdeAgungAbelPutra.jbus_android.request.UtilsApi;
 
 import org.w3c.dom.Text;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class AboutMeActivity extends AppCompatActivity {
+    private BaseApiService mApiService;
+    private Context mContext;
+    private TextView userInfo,emailInfo,balanceInfo;
+    private EditText topUp;
+    private Button topUpBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_me);
 
-        TextView userInfo = findViewById(R.id.username);
-        TextView emailInfo = findViewById(R.id.email);
-        TextView balanceInfo = findViewById(R.id.balance);
+        mApiService = UtilsApi.getApiService();
+        mContext = this;
+        userInfo = findViewById(R.id.username);
+        emailInfo = findViewById(R.id.email);
+        balanceInfo = findViewById(R.id.balance);
+        topUp = findViewById(R.id.topup);
+        topUpBtn = findViewById(R.id.topup_btn);
 
-        userInfo.setText("Pathricc1234");
-        emailInfo.setText("abelputra101@gmail.com");
-        balanceInfo.setText("IDR 5000000.0");
+        if (LoginActivity.loggedAccount != null) {
+            userInfo.setText(LoginActivity.loggedAccount.name);
+            emailInfo.setText(LoginActivity.loggedAccount.email);
+            balanceInfo.setText(String.valueOf(LoginActivity.loggedAccount.balance));
+        }
+        else {
+            userInfo.setText("N/A");
+            emailInfo.setText("N/A");
+            balanceInfo.setText("N/A");
+        }
+
+        topUpBtn.setOnClickListener(v->handleTopUp());
+    }
+
+    protected void handleTopUp() {
+        String topUpS = topUp.getText().toString();
+        if (topUpS.isEmpty()) {
+            Toast.makeText(mContext, "Enter the Amount Please", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        double topUpA = Double.parseDouble(topUpS);
+        mApiService.topUp(LoginActivity.loggedAccount.id,topUpA).enqueue(new Callback<BaseResponse<Double>>() {
+            @Override
+            public void onResponse(Call<BaseResponse<Double>> call, Response<BaseResponse<Double>> response) {
+                if(!response.isSuccessful()){
+                    Toast.makeText(mContext, "Top up Failed", Toast.LENGTH_SHORT).show();
+                }
+                double upBalance = response.body().payload;
+                LoginActivity.loggedAccount.balance = upBalance;
+                balanceInfo.setText(String.valueOf(upBalance));
+                Toast.makeText(mContext, "Top Up Successful", Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onFailure(Call<BaseResponse<Double>> call, Throwable t) {
+                Toast.makeText(mContext, "Network Error", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
+

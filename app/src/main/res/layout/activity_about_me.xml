@@ -39,8 +39,7 @@
             android:layout_height="wrap_content"
             android:gravity="right"
             android:textSize="18sp"
-            android:textColor="#777777"
-            tools:text="-">
+            android:textColor="#777777">
         </TextView>
     </LinearLayout>
     <LinearLayout
@@ -62,8 +61,7 @@
             android:layout_height="wrap_content"
             android:gravity="right"
             android:textSize="18sp"
-            android:textColor="#777777"
-            tools:text="-">
+            android:textColor="#777777">
         </TextView>
     </LinearLayout>
     <LinearLayout
@@ -85,8 +83,7 @@
             android:layout_height="wrap_content"
             android:gravity="right"
             android:textSize="18sp"
-            android:textColor="#777777"
-            tools:text="-">
+            android:textColor="#777777">
         </TextView>
     </LinearLayout>
     <LinearLayout
