@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -26,8 +27,10 @@ public class AboutMeActivity extends AppCompatActivity {
     private BaseApiService mApiService;
     private Context mContext;
     private TextView userInfo,emailInfo,balanceInfo;
+    public  static TextView noRenter,renterReg,existRenter;
     private EditText topUp;
     private Button topUpBtn;
+    public static Button manageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +55,32 @@ public class AboutMeActivity extends AppCompatActivity {
             emailInfo.setText("N/A");
             balanceInfo.setText("N/A");
         }
-
         topUpBtn.setOnClickListener(v->handleTopUp());
+
+        noRenter = findViewById(R.id.no_renter);
+        renterReg = findViewById(R.id.no_renter_reg);
+        existRenter = findViewById(R.id.renter);
+        manageButton = findViewById(R.id.manage_button);
+
+        if(LoginActivity.loggedAccount.company == null){
+            noRenter.setVisibility(TextView.VISIBLE);
+            renterReg.setVisibility(TextView.VISIBLE);
+            existRenter.setVisibility(TextView.GONE);
+            manageButton.setVisibility(TextView.GONE);
+        }
+        else {
+            noRenter.setVisibility(TextView.GONE);
+            renterReg.setVisibility(TextView.GONE);
+            existRenter.setVisibility(TextView.VISIBLE);
+            manageButton.setVisibility(TextView.VISIBLE);
+        }
+        renterReg.setOnClickListener(v->{moveActivity(mContext,RegisterRenterActivity.class);});
+        manageButton.setOnClickListener(l->{moveActivity(mContext,ManageBusActivity.class);});
+    }
+
+    private void moveActivity(Context context, Class<?> cls){
+        Intent intent = new Intent(context,cls);
+        startActivity(intent);
     }
 
     protected void handleTopUp() {
