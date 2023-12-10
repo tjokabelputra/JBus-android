@@ -8,7 +8,7 @@ import java.util.List;
 public class Bus extends Serializable {
     public int accountId;
     public String name;
-    public List<Facility> facilities;
+    public List<Facility> facility;
     public Price price;
     public int capacity;
     public BusType busType;

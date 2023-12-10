@@ -22,6 +22,7 @@ import retrofit2.Response;
 public class LoginActivity extends AppCompatActivity {
     private TextView registerHere = null;
     private Button loginButton = null;
+    private TextView forgotPass = null;
     private BaseApiService mApiService;
     private Context mContext;
     private EditText email,password;
@@ -34,9 +35,9 @@ public class LoginActivity extends AppCompatActivity {
 
         registerHere = findViewById(R.id.registerhere);
         loginButton = findViewById(R.id.login);
+        forgotPass = findViewById(R.id.forgotPassword);
         registerHere.setOnClickListener(v -> {moveActivity(this,RegisterActivity.class);});
-
-        getSupportActionBar().hide();
+        forgotPass.setOnClickListener(v->{moveActivity(this, ForgotPasswordActivity.class);});
 
         mContext = this;
         mApiService = UtilsApi.getApiService();
@@ -59,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
         String passwordS = password.getText().toString();
 
         if(emailS.isEmpty() || passwordS.isEmpty()){
-            Toast.makeText(mContext,"Please Fill The Required Field",Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext,"Mohon isi email dan password",Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -73,12 +74,12 @@ public class LoginActivity extends AppCompatActivity {
                 BaseResponse<Account> res = response.body();
                 if (res != null && res.success) {
                     loggedAccount = res.payload;
-                    Toast.makeText(mContext, "Welcome to JBus", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "Selamat Datang", Toast.LENGTH_SHORT).show();
                     moveActivity(mContext,MainActivity.class);
                     finish();
                 }
                 else {
-                    Toast.makeText(mContext, "Login Failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "Pasword atau Email salah", Toast.LENGTH_SHORT).show();
                 }
             }
 

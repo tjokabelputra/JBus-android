@@ -7,24 +7,34 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     tools:ignore="UselessParent">
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/Busimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="🚌"
+        android:textSize="24dp"
+        android:gravity="center"
+        tools:ignore="ContentDescription" />
+    <TextView
+        android:id="@+id/bus_name"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:gravity="center_vertical">
-
-        <TextView
-            android:id="@+id/bus_name"
-            android:layout_width="330dp"
-            android:layout_height="match_parent"
-            android:textColor="@color/black"
-            android:textSize="36dp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/baseline_calendar_month_24"
-            app:tint="@color/black"></ImageView>
-    </LinearLayout>
+        android:layout_weight="1"
+        android:text="Bus Name"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textColor="@color/white" />
+    <ImageView
+        android:id="@+id/schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp"
+        android:src="@drawable/ic_baseline_calendar_month_24"></ImageView>
+    <ImageView
+        android:layout_margin="12dp"
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_baseline_delete_24"></ImageView>
 </LinearLayout>

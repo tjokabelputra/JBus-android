@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#1B213D">
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/border_popup"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter"
+            android:textColor="@color/black"
+            android:textSize="36dp"></TextView>
+
+        <LinearLayout
+            android:id="@+id/departure"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="86dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Departure"
+                android:textAlignment="center"
+                android:textColor="@color/black"></TextView>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_house_24"
+                app:tint="@color/black"></ImageView>
+
+            <Spinner
+                android:id="@+id/departure_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center"></Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/arrival"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="86dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Arrival"
+                android:textAlignment="center"
+                android:textColor="@color/black"></TextView>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_house_24"
+                app:tint="@color/black"></ImageView>
+
+            <Spinner
+                android:id="@+id/arrival_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center"></Spinner>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/cancel_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textColor="#007AAF"
+                android:textSize="24dp"
+                android:layout_marginHorizontal="24dp">
+            </TextView>
+            <TextView
+                android:id="@+id/filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accept"
+                android:textColor="#007AAF"
+                android:textSize="24dp"
+                android:layout_marginHorizontal="24dp">
+            </TextView>
+    </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

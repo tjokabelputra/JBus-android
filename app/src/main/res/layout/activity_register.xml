@@ -5,61 +5,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity"
     android:gravity="center"
-    android:orientation="vertical">
-
+    android:background="#1B213D"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
     <TextView
         android:id="@+id/judul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register Your Account"
-        android:textColor="#777777"
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginBottom="10dp"/>
-
     <TextView
         android:id="@+id/desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Masukan Username, Email, dan Password"
-        android:textColor="#777777"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:layout_marginBottom="10dp"/>
-
     <LinearLayout
         android:id="@+id/regist_form"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginHorizontal="36dp">
-
         <EditText
             android:id="@+id/user_reg"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
+            android:background="@drawable/custom_edittext"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:hint="Username"
             android:inputType="textNoSuggestions" />
-
         <EditText
             android:id="@+id/mail_reg"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
+            android:background="@drawable/custom_edittext"
+            android:drawableLeft="@drawable/ic_baseline_mail_24"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:hint="Email"
             android:inputType="textNoSuggestions" />
-
         <EditText
             android:id="@+id/pass_reg"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_edittext"
+            android:drawableLeft="@drawable/ic_baseline_key_24"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:hint="Password"
             android:inputType="textPassword"
             android:layout_marginBottom="20dp"/>
-
+        <EditText
+            android:id="@+id/pass_reg_repeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_edittext"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:hint="Repeat Password"
+            android:inputType="textPassword"
+            android:layout_marginBottom="20dp"/>
         <Button
             android:id="@+id/regist_button"
             android:layout_width="match_parent"
@@ -67,8 +92,28 @@
             android:paddingHorizontal="16dp"
             android:paddingVertical="12dp"
             android:text="REGISTER"
+            android:textSize="18dp"
             android:textAllCaps="false"
-            app:cornerRadius="21dp" />
-
+            app:cornerRadius="20dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="12dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an accout?"
+            android:textColor="@color/white"></TextView>
+        <TextView
+            android:id="@+id/acc_exist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text="Click here"
+            android:textColor="#04D9FF"
+            android:textStyle="bold"></TextView>
     </LinearLayout>
 </LinearLayout>

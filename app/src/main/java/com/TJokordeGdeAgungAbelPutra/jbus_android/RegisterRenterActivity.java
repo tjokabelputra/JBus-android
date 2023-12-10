@@ -22,7 +22,6 @@ public class RegisterRenterActivity extends AppCompatActivity {
     private BaseApiService mApiService;
     private Context mContext;
     private EditText companyName,address,phoneNumber;
-    private Button registerCompany;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +33,7 @@ public class RegisterRenterActivity extends AppCompatActivity {
         companyName = findViewById(R.id.comp_name);
         address = findViewById(R.id.comp_address);
         phoneNumber = findViewById(R.id.comp_phone);
-        registerCompany = findViewById(R.id.regist_comp_btn);
+        Button registerCompany = findViewById(R.id.regist_comp_btn);
 
         registerCompany.setOnClickListener(v->handleRegisterCompany());
     }
@@ -45,7 +44,7 @@ public class RegisterRenterActivity extends AppCompatActivity {
         String phoneNumberS = phoneNumber.getText().toString();
 
         if(companyNameS.isEmpty() || addressS.isEmpty() || phoneNumberS.isEmpty()){
-            Toast.makeText(mContext,"Please Enter the Field",Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext,"Mohon isi semua",Toast.LENGTH_SHORT).show();
             return;
         }
         mApiService.registerRenter(LoginActivity.loggedAccount.id,companyNameS,addressS,phoneNumberS).enqueue(new Callback<BaseResponse<Renter>>() {
@@ -58,10 +57,9 @@ public class RegisterRenterActivity extends AppCompatActivity {
                 BaseResponse<Renter> res = response.body();
                 AboutMeActivity.noRenter.setVisibility(TextView.GONE);
                 AboutMeActivity.renterReg.setVisibility(TextView.GONE);
-                AboutMeActivity.existRenter.setVisibility(TextView.VISIBLE);
                 AboutMeActivity.manageButton.setVisibility(TextView.VISIBLE);
                 if (res.success) finish();
-                Toast.makeText(mContext,res.message,Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext,"Akun renter berhasil dibuat",Toast.LENGTH_SHORT).show();
             }
 
             @Override

@@ -1,73 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
     android:gravity="center"
-    android:orientation="vertical">
+    android:background="#1B213D"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
         android:gravity="center"
-        android:text="JBUS\n🚌"
-        android:textSize="48sp"
-        android:textColor="#777777" />
+        android:text="JBUS"
+        android:textColor="@color/white"
+        android:textSize="48sp"/>
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_baseline_directions_bus_24"
+        android:layout_marginBottom="12dp"/>
     <LinearLayout
         android:id="@+id/login_form"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginHorizontal="36dp">
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:textSize="36dp"
+            android:text="Login"
+            android:textColor="@color/white" />
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
+            android:background="@drawable/custom_edittext"
+            android:drawableLeft="@drawable/ic_baseline_mail_24"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
             android:hint="Email"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:inputType="textEmailAddress" />
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_edittext"
+            android:drawableLeft="@drawable/ic_baseline_key_24"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
             android:hint="Password"
-            android:inputType="textPassword"
-            android:layout_marginBottom="20dp"/>
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:inputType="textPassword"/>
         <Button
             android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="16dp"
+            android:layout_margin="20dp"
             android:paddingVertical="12dp"
             android:text="LOGIN"
-            app:cornerRadius="20dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:gravity="center"
-            android:paddingTop="10dp"
-            android:text="Join Us"
-            android:textAlignment="center"
-            android:textColor="#777777" />
-        <TextView
-            android:id="@+id/registerhere"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:fontFamily="sans-serif"
-            android:gravity="center"
-            android:paddingHorizontal="16dp"
-            android:text="Register Here"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textColor="#777777"
-            android:textStyle="bold"/>
+            android:textSize="12dp"
+            app:cornerRadius="20dp"/>
     </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center"
+        android:text="Don't have an account"
+        android:textAlignment="center"
+        android:textColor="@color/white" />
+    <TextView
+        android:id="@+id/registerhere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:paddingHorizontal="16dp"
+        android:text="Register Here"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#04D9FF"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:paddingHorizontal="16dp"
+        android:text="Forgot Password"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#04D9FF"
+        android:textStyle="bold" />
 </LinearLayout>

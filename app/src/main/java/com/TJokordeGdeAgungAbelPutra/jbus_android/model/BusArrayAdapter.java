@@ -33,10 +33,7 @@ public class BusArrayAdapter  extends ArrayAdapter<Bus> {
         busName.setText(currentNumberPosition.toString());
 
         TextView busDesc = currentItemView.findViewById(R.id.description);
-        busDesc.setText("Bus tujuan X ke Y");
-
-        TextView busDate = currentItemView.findViewById(R.id.jadwal);
-        busDate.setText("01/01/1970 00:00:00");
+        busDesc.setText(currentNumberPosition.departure.stationName + " Tujuan " + currentNumberPosition.arrival.stationName);
 
         return currentItemView;
     }

@@ -48,7 +48,7 @@ public class AddBusActivity extends AppCompatActivity {
     AdapterView.OnItemSelectedListener busTypeOISL = new AdapterView.OnItemSelectedListener() {
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-            ((TextView) parent.getChildAt(0)).setTextColor(Color.BLACK);
+            ((TextView) parent.getChildAt(0)).setTextColor(Color.WHITE);
             selectedBusType = busType[position];
         }
 
@@ -59,7 +59,7 @@ public class AddBusActivity extends AppCompatActivity {
     AdapterView.OnItemSelectedListener deptOISL = new AdapterView.OnItemSelectedListener() {
         @Override
         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-            ((TextView) adapterView.getChildAt(0)).setTextColor(Color.BLACK);
+            ((TextView) adapterView.getChildAt(0)).setTextColor(Color.WHITE);
             selectedDeptStationID = i;
         }
 
@@ -70,7 +70,7 @@ public class AddBusActivity extends AppCompatActivity {
     AdapterView.OnItemSelectedListener arrOISL = new AdapterView.OnItemSelectedListener() {
         @Override
         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-            ((TextView) adapterView.getChildAt(0)).setTextColor(Color.BLACK);
+            ((TextView) adapterView.getChildAt(0)).setTextColor(Color.WHITE);
             selectedArrStationID = i;
         }
 
@@ -142,7 +142,7 @@ public class AddBusActivity extends AppCompatActivity {
         });
     }
     protected void handleCheck() {
-        selectedFacilities.clear();
+        selectedFacilities = new ArrayList<>();
         if (acCheckBox.isChecked()) {
             selectedFacilities.add(Facility.AC);
         }
@@ -172,8 +172,9 @@ public class AddBusActivity extends AppCompatActivity {
         String busNameS = busName.getText().toString();
         String capacityS = capacity.getText().toString();
         String priceS = price.getText().toString();
+        handleCheck();
         if (busNameS.isEmpty() || capacityS.isEmpty() || priceS.isEmpty()) {
-            Toast.makeText(mContext, "Enter the Field Please", Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, "Mohon untuk mengisi semuanya", Toast.LENGTH_SHORT).show();
             return;
         }
         int capacity = Integer.parseInt(capacityS);
@@ -185,8 +186,11 @@ public class AddBusActivity extends AppCompatActivity {
                     Toast.makeText(mContext, "App Error", Toast.LENGTH_SHORT).show();
                 }
                 BaseResponse<Bus> res = response.body();
-                if (response.isSuccessful()) finish();
-                Toast.makeText(mContext, "Bus Created Successfully", Toast.LENGTH_SHORT).show();
+                if (response.isSuccessful()) {
+                    Toast.makeText(mContext, "Bus berhasil dibuat", Toast.LENGTH_SHORT).show();
+                    setResult(RESULT_OK);
+                    finish();
+                }
             }
 
             @Override
