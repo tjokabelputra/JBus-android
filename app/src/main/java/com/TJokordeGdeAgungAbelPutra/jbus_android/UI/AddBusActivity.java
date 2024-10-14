@@ -1,4 +1,4 @@
-package com.TJokordeGdeAgungAbelPutra.jbus_android;
+package com.TJokordeGdeAgungAbelPutra.jbus_android.UI;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -14,8 +14,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatSpinner;
 
+import com.TJokordeGdeAgungAbelPutra.jbus_android.R;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.model.BaseResponse;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Bus;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.model.BusType;

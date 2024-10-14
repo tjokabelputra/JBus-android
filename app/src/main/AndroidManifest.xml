@@ -16,55 +16,55 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".TransactionHistoryActivity"
+            android:name=".UI.TransactionHistoryActivity"
             android:exported="false" />
         <activity
-            android:name=".CheckoutActivity"
+            android:name=".UI.CheckoutActivity"
             android:exported="false" />
         <activity
-            android:name=".busDetailActivity"
+            android:name=".UI.busDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".BuyTicketActivity"
+            android:name=".UI.BuyTicketActivity"
             android:exported="false" />
         <activity
-            android:name=".ViewBusActivity"
+            android:name=".UI.ViewBusActivity"
             android:exported="false" />
         <activity
             android:name=".EditBusActivity"
             android:exported="false" />
         <activity
-            android:name=".VerifyResetPasswordActivity"
+            android:name=".UI.VerifyResetPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".ForgotPasswordActivity"
+            android:name=".UI.ForgotPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".EditScheduleActivity"
+            android:name=".UI.EditScheduleActivity"
             android:exported="false" />
         <activity
             android:name=".AddScheduleActivity"
             android:exported="false" />
         <activity
-            android:name=".AddBusActivity"
+            android:name=".UI.AddBusActivity"
             android:exported="false" />
         <activity
-            android:name=".ManageBusActivity"
+            android:name=".UI.ManageBusActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterRenterActivity"
+            android:name=".UI.RegisterRenterActivity"
             android:exported="false" />
         <activity
-            android:name=".AboutMeActivity"
+            android:name=".UI.AboutMeActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".UI.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".UI.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".UI.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

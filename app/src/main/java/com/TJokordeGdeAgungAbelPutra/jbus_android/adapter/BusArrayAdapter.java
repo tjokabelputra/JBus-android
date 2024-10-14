@@ -1,4 +1,4 @@
-package com.TJokordeGdeAgungAbelPutra.jbus_android.model;
+package com.TJokordeGdeAgungAbelPutra.jbus_android.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.TJokordeGdeAgungAbelPutra.jbus_android.R;
+import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Bus;
 
 import java.util.ArrayList;
 

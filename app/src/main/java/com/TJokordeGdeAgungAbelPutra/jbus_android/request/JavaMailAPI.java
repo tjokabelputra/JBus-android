@@ -1,4 +1,4 @@
-package com.TJokordeGdeAgungAbelPutra.jbus_android.model;
+package com.TJokordeGdeAgungAbelPutra.jbus_android.request;
 
 import android.os.AsyncTask;
 

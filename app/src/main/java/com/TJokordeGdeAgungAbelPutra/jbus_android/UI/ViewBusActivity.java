@@ -1,11 +1,10 @@
-package com.TJokordeGdeAgungAbelPutra.jbus_android;
+package com.TJokordeGdeAgungAbelPutra.jbus_android.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -16,9 +15,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.TJokordeGdeAgungAbelPutra.jbus_android.R;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.model.BaseResponse;
-import com.TJokordeGdeAgungAbelPutra.jbus_android.model.busSeatListChooseAdapter;
-import com.TJokordeGdeAgungAbelPutra.jbus_android.model.busSeatsAdapter;
+import com.TJokordeGdeAgungAbelPutra.jbus_android.adapter.busSeatsAdapter;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Facility;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Schedule;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.request.BaseApiService;

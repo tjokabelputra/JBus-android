@@ -1,15 +1,15 @@
-package com.TJokordeGdeAgungAbelPutra.jbus_android;
+package com.TJokordeGdeAgungAbelPutra.jbus_android.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.TJokordeGdeAgungAbelPutra.jbus_android.R;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Account;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.model.BaseResponse;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.request.BaseApiService;

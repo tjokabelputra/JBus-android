@@ -1,4 +1,4 @@
-    package com.TJokordeGdeAgungAbelPutra.jbus_android.model;
+    package com.TJokordeGdeAgungAbelPutra.jbus_android.adapter;
 
     import android.content.Context;
     import android.view.LayoutInflater;
@@ -13,14 +13,18 @@
     import androidx.recyclerview.widget.LinearLayoutManager;
     import androidx.recyclerview.widget.RecyclerView;
 
-    import com.TJokordeGdeAgungAbelPutra.jbus_android.LoginActivity;
+    import com.TJokordeGdeAgungAbelPutra.jbus_android.UI.LoginActivity;
     import com.TJokordeGdeAgungAbelPutra.jbus_android.R;
+    import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Account;
+    import com.TJokordeGdeAgungAbelPutra.jbus_android.model.BaseResponse;
+    import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Bus;
+    import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Payment;
+    import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Schedule;
     import com.TJokordeGdeAgungAbelPutra.jbus_android.request.BaseApiService;
     import com.TJokordeGdeAgungAbelPutra.jbus_android.request.UtilsApi;
 
     import java.sql.Timestamp;
     import java.util.ArrayList;
-    import java.util.HashMap;
     import java.util.List;
     import java.util.Map;
 

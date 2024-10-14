@@ -1,18 +1,18 @@
-package com.TJokordeGdeAgungAbelPutra.jbus_android;
+package com.TJokordeGdeAgungAbelPutra.jbus_android.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.TJokordeGdeAgungAbelPutra.jbus_android.R;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Invoice;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Payment;
-import com.TJokordeGdeAgungAbelPutra.jbus_android.model.TransactionListAdapter;
+import com.TJokordeGdeAgungAbelPutra.jbus_android.adapter.TransactionListAdapter;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.request.BaseApiService;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.request.UtilsApi;
 

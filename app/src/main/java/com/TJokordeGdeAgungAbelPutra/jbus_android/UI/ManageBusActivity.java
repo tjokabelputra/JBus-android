@@ -1,4 +1,4 @@
-package com.TJokordeGdeAgungAbelPutra.jbus_android;
+package com.TJokordeGdeAgungAbelPutra.jbus_android.UI;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +14,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.TJokordeGdeAgungAbelPutra.jbus_android.model.busListAdapter;
+import com.TJokordeGdeAgungAbelPutra.jbus_android.R;
+import com.TJokordeGdeAgungAbelPutra.jbus_android.adapter.busListAdapter;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Bus;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.request.BaseApiService;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.request.UtilsApi;

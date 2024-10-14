@@ -1,4 +1,4 @@
-    package com.TJokordeGdeAgungAbelPutra.jbus_android.model;
+    package com.TJokordeGdeAgungAbelPutra.jbus_android.adapter;
 
     import android.app.AlertDialog;
     import android.content.Context;
@@ -14,9 +14,11 @@
     import androidx.annotation.NonNull;
     import androidx.annotation.Nullable;
 
-    import com.TJokordeGdeAgungAbelPutra.jbus_android.EditScheduleActivity;
-    import com.TJokordeGdeAgungAbelPutra.jbus_android.ManageBusActivity;
+    import com.TJokordeGdeAgungAbelPutra.jbus_android.UI.EditScheduleActivity;
+    import com.TJokordeGdeAgungAbelPutra.jbus_android.UI.ManageBusActivity;
     import com.TJokordeGdeAgungAbelPutra.jbus_android.R;
+    import com.TJokordeGdeAgungAbelPutra.jbus_android.model.BaseResponse;
+    import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Bus;
     import com.TJokordeGdeAgungAbelPutra.jbus_android.request.BaseApiService;
     import com.TJokordeGdeAgungAbelPutra.jbus_android.request.UtilsApi;
 

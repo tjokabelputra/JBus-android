@@ -1,4 +1,4 @@
-package com.TJokordeGdeAgungAbelPutra.jbus_android.model;
+package com.TJokordeGdeAgungAbelPutra.jbus_android.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
 import com.TJokordeGdeAgungAbelPutra.jbus_android.R;
+import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Schedule;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-        package com.TJokordeGdeAgungAbelPutra.jbus_android;
+        package com.TJokordeGdeAgungAbelPutra.jbus_android.UI;
 
         import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,6 @@
         import android.content.Intent;
         import android.graphics.Color;
         import android.os.Bundle;
-        import android.util.Log;
         import android.view.View;
         import android.widget.AdapterView;
         import android.widget.ArrayAdapter;
@@ -16,22 +15,19 @@
         import android.widget.TextView;
         import android.widget.Toast;
 
+        import com.TJokordeGdeAgungAbelPutra.jbus_android.R;
         import com.TJokordeGdeAgungAbelPutra.jbus_android.model.BaseResponse;
         import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Payment;
         import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Schedule;
-        import com.TJokordeGdeAgungAbelPutra.jbus_android.model.busSeatListChooseAdapter;
-        import com.TJokordeGdeAgungAbelPutra.jbus_android.model.seatSelectedAdapter;
+        import com.TJokordeGdeAgungAbelPutra.jbus_android.adapter.busSeatListChooseAdapter;
+        import com.TJokordeGdeAgungAbelPutra.jbus_android.adapter.seatSelectedAdapter;
         import com.TJokordeGdeAgungAbelPutra.jbus_android.request.BaseApiService;
         import com.TJokordeGdeAgungAbelPutra.jbus_android.request.UtilsApi;
 
-        import java.sql.Timestamp;
-        import java.text.SimpleDateFormat;
         import java.util.ArrayList;
         import java.util.HashMap;
         import java.util.List;
-        import java.util.Locale;
         import java.util.Map;
-        import java.util.TimeZone;
 
         import retrofit2.Call;
         import retrofit2.Callback;

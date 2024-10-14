@@ -1,4 +1,4 @@
-package com.TJokordeGdeAgungAbelPutra.jbus_android;
+package com.TJokordeGdeAgungAbelPutra.jbus_android.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,9 +11,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.TJokordeGdeAgungAbelPutra.jbus_android.R;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Facility;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Schedule;
-import com.TJokordeGdeAgungAbelPutra.jbus_android.model.scheduleListAdapter;
+import com.TJokordeGdeAgungAbelPutra.jbus_android.adapter.scheduleListAdapter;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.request.BaseApiService;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.request.UtilsApi;
 

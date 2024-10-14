@@ -1,4 +1,4 @@
-package com.TJokordeGdeAgungAbelPutra.jbus_android;
+package com.TJokordeGdeAgungAbelPutra.jbus_android.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.TJokordeGdeAgungAbelPutra.jbus_android.R;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.model.BaseResponse;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Renter;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.request.BaseApiService;

@@ -1,10 +1,9 @@
-package com.TJokordeGdeAgungAbelPutra.jbus_android;
+package com.TJokordeGdeAgungAbelPutra.jbus_android.UI;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
-import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -26,8 +25,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.TJokordeGdeAgungAbelPutra.jbus_android.R;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Bus;
-import com.TJokordeGdeAgungAbelPutra.jbus_android.model.BusArrayAdapter;
+import com.TJokordeGdeAgungAbelPutra.jbus_android.adapter.BusArrayAdapter;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Station;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.request.BaseApiService;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.request.UtilsApi;

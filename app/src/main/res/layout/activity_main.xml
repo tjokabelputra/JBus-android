@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".UI.LoginActivity"
     android:background="#1B213D"
     android:gravity="center"
     android:orientation="vertical">
@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="こんにちは\n🚌💥"
+        android:text="Welcome to Jbus"
         android:textSize="40sp"
         android:textColor="@color/white" />
     <LinearLayout
@@ -46,7 +46,7 @@
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="420dp"
-        tools:context=".MainActivity"></ListView>
+        tools:context=".UI.MainActivity"></ListView>
     <LinearLayout
         android:id="@+id/pagination_footer"
         android:layout_width="match_parent"

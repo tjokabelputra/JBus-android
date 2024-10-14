@@ -1,5 +1,4 @@
-package com.TJokordeGdeAgungAbelPutra.jbus_android.model;
-
+package com.TJokordeGdeAgungAbelPutra.jbus_android.adapter;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,14 +10,15 @@ import android.widget.TextView;
 import com.TJokordeGdeAgungAbelPutra.jbus_android.R;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class busSeatListChooseAdapter extends BaseAdapter {
+public class busSeatsAdapter extends BaseAdapter {
     private Context context;
     private List<Map.Entry<String, Boolean>> data;
 
-    public busSeatListChooseAdapter(Context context, Map<String, Boolean> hashMap) {
+    public busSeatsAdapter(Context context, Map<String, Boolean> hashMap) {
         this.context = context;
         this.data = new ArrayList<>(hashMap.entrySet());
     }

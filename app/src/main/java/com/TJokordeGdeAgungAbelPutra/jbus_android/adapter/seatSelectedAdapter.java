@@ -1,4 +1,4 @@
-package com.TJokordeGdeAgungAbelPutra.jbus_android.model;
+package com.TJokordeGdeAgungAbelPutra.jbus_android.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;

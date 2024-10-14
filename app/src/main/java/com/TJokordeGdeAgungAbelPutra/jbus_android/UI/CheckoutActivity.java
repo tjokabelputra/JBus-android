@@ -1,6 +1,5 @@
-    package com.TJokordeGdeAgungAbelPutra.jbus_android;
+    package com.TJokordeGdeAgungAbelPutra.jbus_android.UI;
 
-    import androidx.annotation.NonNull;
     import androidx.appcompat.app.AppCompatActivity;
 
     import android.content.Context;
@@ -13,9 +12,10 @@
     import android.widget.ListView;
     import android.widget.Toast;
 
+    import com.TJokordeGdeAgungAbelPutra.jbus_android.R;
     import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Invoice;
     import com.TJokordeGdeAgungAbelPutra.jbus_android.model.Payment;
-    import com.TJokordeGdeAgungAbelPutra.jbus_android.model.checkoutListAdapter;
+    import com.TJokordeGdeAgungAbelPutra.jbus_android.adapter.checkoutListAdapter;
     import com.TJokordeGdeAgungAbelPutra.jbus_android.request.BaseApiService;
     import com.TJokordeGdeAgungAbelPutra.jbus_android.request.UtilsApi;
 

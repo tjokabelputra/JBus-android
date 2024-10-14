@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".UI.LoginActivity"
     android:gravity="center"
     android:background="#1B213D"
     android:orientation="vertical">
@@ -12,5 +12,5 @@
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity"></ListView>
+        tools:context=".UI.MainActivity"></ListView>
 </LinearLayout>
